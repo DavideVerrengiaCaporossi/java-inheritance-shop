@@ -3,13 +3,15 @@ package jana60;
 import java.text.DecimalFormat;
 
 public class Prodotto {
+	private String nome;
 	private int codice;
 	private String marca;
 	private double prezzo;
 	private int iva;
 
-	public Prodotto(int codice, String marca, double prezzo, int iva) {
+	public Prodotto(int codice,String nome, String marca, double prezzo, int iva) {
 		super();
+		this.nome = nome;
 		this.codice = codice;
 		this.marca = marca;
 		this.prezzo = prezzo;
@@ -50,6 +52,7 @@ public class Prodotto {
 		double prezzoFinale = (prezzo / 100) * iva + prezzo;
 		return prezzoFinale;
 	}
+	//da cambiare
 	public String formattaPrezzo() 
 	{
 		String prezzoFormattato = df.format(prezzoTotale()) ;

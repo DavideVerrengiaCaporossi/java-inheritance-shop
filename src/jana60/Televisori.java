@@ -1,10 +1,10 @@
 package jana60;
 
-public class Televisori {
+public class Televisori extends Prodotto {
 	private double dimensioni;
 	private boolean tvSmart;
-	public Televisori(double dimensioni, boolean tvSmart) {
-		super();
+	public Televisori(int codice, String nome, String marca, double prezzo, int iva,double dimensioni, boolean tvSmart) {
+		super(codice, nome, marca, prezzo, iva);
 		this.dimensioni = dimensioni;
 		this.tvSmart = tvSmart;
 	}
@@ -20,6 +20,13 @@ public class Televisori {
 	public void setTvSmart(boolean tvSmart) {
 		this.tvSmart = tvSmart;
 	}
+	//metodo che restituisce la stampa cn la stringa in polli fatta per far capire che ogni classe puo avere metodi propri
+	public String getDimensioniInPollici() {
+		return dimensioni + "pollici";
+			
+	}
+	//creiamo il metodo con if is smart per fargli dire se  ismartstring e smart o no
+	
 	
 	@Override
 	public String toString() {

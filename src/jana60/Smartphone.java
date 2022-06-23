@@ -1,11 +1,11 @@
 package jana60;
 
-public class Smartphone {
+public class Smartphone extends Prodotto{
 	private String imei;
-	private float memoria;
+	private int memoria;
 
-	public Smartphone(String imei, float memoria) {
-		super();
+	public Smartphone(int codice,String nome, String marca, double prezzo, int iva,String imei, int memoria) {
+		super(codice,nome,marca,prezzo,iva);
 		this.imei = imei;
 		this.memoria = memoria;
 	}
@@ -22,7 +22,7 @@ public class Smartphone {
 		return memoria;
 	}
 
-	public void setMemoria(float memoria) {
+	public void setMemoria(int memoria) {
 		this.memoria = memoria;
 	}
 

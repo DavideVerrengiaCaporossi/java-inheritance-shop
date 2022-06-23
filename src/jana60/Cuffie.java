@@ -1,10 +1,10 @@
 package jana60;
 
-public class Cuffie {
+public class Cuffie extends Prodotto{
 private String colore;
 private boolean wifiSiNo;
-public Cuffie(String colore, boolean wifiSiNo) {
-	super();
+public Cuffie(int codice,String nome, String marca, double prezzo, int iva,String colore, boolean wifiSiNo) {
+	super(codice,nome, marca, prezzo, iva);
 	this.colore = colore;
 	this.wifiSiNo = wifiSiNo;
 }
