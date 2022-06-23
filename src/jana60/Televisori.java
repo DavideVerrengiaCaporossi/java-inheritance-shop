@@ -1,9 +1,9 @@
 package jana60;
 
 public class Televisori extends Prodotto {
-	private double dimensioni;
+	private int dimensioni;
 	private boolean tvSmart;
-	public Televisori(int codice, String nome, String marca, double prezzo, int iva,double dimensioni, boolean tvSmart) {
+	public Televisori(int codice, String nome, String marca, double prezzo, int iva,int dimensioni, boolean tvSmart) {
 		super(codice, nome, marca, prezzo, iva);
 		this.dimensioni = dimensioni;
 		this.tvSmart = tvSmart;
@@ -11,7 +11,7 @@ public class Televisori extends Prodotto {
 	public double getDimensioni() {
 		return dimensioni;
 	}
-	public void setDimensioni(double dimensioni) {
+	public void setDimensioni(int dimensioni) {
 		this.dimensioni = dimensioni;
 	}
 	public boolean isTvSmart() {
@@ -25,13 +25,17 @@ public class Televisori extends Prodotto {
 		return dimensioni + "pollici";
 			
 	}
-	//creiamo il metodo con if is smart per fargli dire se  ismartstring e smart o no
-	
-	
+	private String isSmart() {
+	    if (tvSmart) {
+	      return "smart tv";
+	    } else {
+	      return "no smart";
+	    }
+	}
 	@Override
 	public String toString() {
 
-		return super.toString() + " e le sue dimensioni sono " + dimensioni + " ed è " + tvSmart ;
+		return super.toString() + " e le sue dimensioni sono " + getDimensioniInPollici() + " ed è " + isSmart() ;
 	}
 	
 	
