@@ -3,8 +3,9 @@ package jana60;
 import java.text.DecimalFormat;
 
 public class Prodotto {
-	private String nome;
+	
 	private int codice;
+	private String nome;
 	private String marca;
 	private double prezzo;
 	private int iva;
@@ -19,6 +20,14 @@ public class Prodotto {
 	}
 
 	DecimalFormat df = new DecimalFormat("#0.00€");
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 	public int getCodice() {
 		return codice;
